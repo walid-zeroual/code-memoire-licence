@@ -1,0 +1,127 @@
+/* this is for open side navbar */
+   
+    
+ 
+   
+   
+.side-nav-open>* {
+    padding: 10px 10px 10px 10px;
+   
+    margin: 5px 10px 10px 20px;
+   
+    
+    
+ }
+ .side-nav-open .btn-primary{
+     position: relative;
+     right: 20px;
+ }
+ .side-nav-open{
+    
+  position: relative;
+  z-index: 100;
+    top: 0;
+    left: 0;
+  
+    width: 235px;
+    height:400px;
+    background-color: black;
+    opacity: 80%;
+    transition: all 0.7s ease-in-out;
+    border-radius: 7px;
+
+} 
+.side-nav-open .btn-primary{
+width: 150px;
+}
+
+.side-nav-close{
+    position: relative;
+    z-index: 100;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    opacity: 0%;
+    background-color: black;
+    transition: all 0.7s ease-in-out;;
+  width: 10px;
+  height: 400px;
+  
+
+}
+.side-nav-close>*{
+    display: none;
+   
+}
+#close{
+    color: rgb(255, 255, 255);
+    position: relative;
+    left: 150px;
+    font-size:xx-large;
+
+    
+}
+
+#sidenav .form-control{
+    position: relative;
+    right: 20px;
+    top: 15px;
+    padding: 0%;
+    margin: 0%;
+    size: 20px;
+    width: 170px;
+}
+
+#sidenav #search-button{
+   border-radius: 0;
+    padding: 0%;
+    margin: 0%;
+    height: 28px;
+    width: 20px;
+    position: relative;
+    left: 160px;
+    bottom: 13px;
+    
+}
+#sidenav #side-search{
+    position: relative;
+    margin-left: 10px;
+    height: 28px;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.side-nav-close ul{
+    margin:0% ;
+    padding: 0%;
+}
+.sidebtn .btn{
+    width: 80px;
+    border-radius: 10px;
+}
+.sidebtn {
+    
+   position: relative;
+   bottom:  20px;
+}
+
+#in{
+    position: relative;
+    right: 35px;
+    top: 20px;
+
+}
+#up{
+    position: relative;
+    left: 60px;
+    bottom: 20px;
+}
+#out{
+    width: 100px;
+}
+.side-nav-open li {
+    margin-left: 10px;
+}
+

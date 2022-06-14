@@ -1,0 +1,58 @@
+
+
+
+
+<div class="all" >
+
+
+
+ <h1  *ngIf='islogin==="true"'>{{'Hello'+' '+ name}}</h1>
+
+ <div class="d-flex justify-content-center">
+   <ol>
+   
+  <li  *ngFor="let courses of currentitems, let rating as rating">
+
+
+
+    <a target="_blank"  [href]="['https://educateplus.000webhostapp.com/items/'+courses.name]">{{courses.name}} </a>  
+    <ngb-rating id="rating" *ngIf='islogin==="true"'  style="font-size: x-large;" [max]="5" [(rate)]="courses.rating" [readonly]="false"
+ (rateChange)="updateratedb(courses.name,$event)" ></ngb-rating>
+ 
+  </li>
+</ol>
+  </div>
+  <!-- <div class="d-flex justify-content-center">
+
+  <tr *ngFor="let courses of currentitems, let rating in rating">
+    <td><h2> <a target="_blank"  [href]="['https://educateplus.000webhostapp.com/items/'+courses.name]">{{courses.name}} </a></h2></td>
+<td>                     
+  <ngb-rating *ngIf='islogin==="true"'  style="font-size: x-large;" [max]="5" [(rate)]="courses.rating" [readonly]="false"
+ (rateChange)="updateratedb(courses.name,$event)" ></ngb-rating>
+</td>
+
+
+  </tr>
+</div> -->
+
+  <div class="d-flex justify-content-center">
+   <ngb-pagination [(page)]="page" [pageSize]="pagesize" (pageChange)="onPageChange(page)"   [collectionSize]="totalitems"  [rotate]="true">
+      <ng-template ngbPaginationPrevious>Prev</ng-template>
+      <ng-template ngbPaginationNext>Next</ng-template>
+      <ng-template ngbPaginationNumber let-page>{{ page }}</ng-template>
+    </ngb-pagination> 
+
+    
+       
+ 
+  </div>
+  
+  <div class="d-flex justify-content-center">
+  <button (click)=" returnfinaldata()" *ngIf='islogin==="true"' class="btn btn-outline-primary">recommended for you</button>
+</div>
+</div>
+ 
+ 
+
+
+

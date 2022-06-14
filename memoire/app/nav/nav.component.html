@@ -1,0 +1,130 @@
+ <!-- <ul class="nav nav-pills">
+  <li  routerLinkActive="active current"  class="list-group-item " ><a class="a" routerLink="/home">home</a> </li>
+        <li  routerLinkActive="active current" class="list-group-item"> <a class="a" routerLink="#" >get started now</a></li>
+       <li  routerLinkActive="active current"  class="list-group-item "> <a class="a" routerLink="#"> about us</a> </li> 
+       <li  routerLinkActive="active current"  class="list-group-item " > <a class="a" routerLink="/singin">sign in </a> </li> 
+       <li routerLinkActive="active current"   class="list-group-item " > <a class="a" routerLink="/courses">courses </a> </li>   
+      </ul> 
+    -->
+    
+   <div class="container-fluid ">
+     <div class="row">
+     
+    <div class="navbar navbar-expand-s  navbar-dark bg-dark  ">
+      <div class="col-md-2">
+      <a routerLink="/">  <button  class="logo"></button></a>
+    </div>
+    <div class="col-md-1">
+       <li class="nav-item ">
+         <a class="nav-link"  routerLink=""   >Home </a>
+       </li></div>
+       <div class="col-md-1">
+       <li class="nav-item">
+         <a class="nav-link " (click)="getcourses()" >Courses</a>
+       </li></div>
+       <div class="col-md-1">
+       <li class="nav-item">
+         <a class="nav-link " routerLink="/about">about</a>
+       </li></div>
+       <!-- navbarDropdown -->
+       <div class="col-md-1">
+        <li class="nav-item">
+          <a class="nav-link " routerLink="/contact">Contact</a>
+        </li></div>
+       <!-- <div class="nav-item" ngbDropdown >
+         <li class="nav-item dropdown">
+           <a ngbDropdownToggle class="nav-link dropdown-toggle"  id="navbarDarkDropdownMenuLink" role="button" >
+             categories
+           </a>
+ <ul ngbDropdownMenu class="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
+             <li><a  class="dropdown-item" routerLink="">front end</a></li>
+             <li><a class="dropdown-item" routerLink="">back end</a></li>
+             <li><a class="dropdown-item" routerLink="">Something else here</a></li>
+</ul>
+         </li>
+       </div>
+      </div>
+       -->
+       
+     
+       <!-- input -->
+      
+   <div class="col-md-3" >
+         <div  class="input-group ">
+           <input  id="search" type="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+ <button (click)="sendcontent()" id="search-button" type="button" class="btn btn-primary">
+   <i class="bi bi-search"></i></button>
+ 
+</div>
+</div>
+
+    <!-- this is for   button -->
+
+    
+      <div class="col-lg-2" id="inline" >
+        <div>
+         <a  (click)="logout()" *ngIf="islogin=='true'" routerLink=""> <button  type="button" class="btn btn-outline-primary">loged out</button></a>
+         
+        </div>
+        
+        
+           <a  id="login" *ngIf="islogin=='false'" routerLink="/signin"> <button  type="button" class="btn btn-outline-light">sign in</button></a>   
+          
+           <a  *ngIf="islogin=='false'"  routerLink="/signup"> <button  type="button" class="btn btn-outline-primary">sign up</button></a>
+         
+        
+        
+        </div> 
+   
+   
+    
+   
+
+
+
+   
+      <i role="button" (click)="showmenu()"  id="icon11"  class="bi bi-list"></i>
+      </div>
+    </div>
+  </div>
+ 
+    
+  
+  
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- signin -->
+<!-- <div id="" ngbDropdown>
+<button  ngbDropdownToggle class="signin"  type="button" id="dropdownMenuButton2" > 
+
+
+ <ul  ngbDropdownMenu class="dropdown-menu " class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+   <li><a class="dropdown-item" href="#">sign in</a></li>
+   <li><a class="dropdown-item" href="#">sign up</a></li>
+   
+ </ul>
+
+</button></div> -->

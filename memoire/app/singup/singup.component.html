@@ -1,0 +1,55 @@
+
+ 
+    <div class="allcontent">
+  <div  class="sign-up-image">
+   
+   
+
+  </div>
+  <div class="d-flex justify-content-center">
+<form  class="f" [formGroup]="formL"  (ngSubmit)="get()" >
+ 
+  <div *ngIf="formL.errors" class="alert alert-danger">this email or username already exisite </div>
+
+    <div class="input-container name">
+    <label for="exampleInputEmail1" class="form-label">username</label>
+    <input  id="user_name"
+     type="text" class="form-control" formControlName="user"  >
+
+    <div class="alert alert-danger"  *ngIf=" user?.touched && !user?.valid">username reqiuerd </div>
+    
+  </div>
+  <div class="input-container email">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input formControlName="email"  id="E_mail"
+     type="email" class="form-control"  >
+    <div class="alert alert-danger"  *ngIf=" email?.touched && !email?.valid"> email reqiuerd </div>
+    
+  </div>
+  <div class="input-container password">
+    <label for="password" class="form-label">Password</label>
+    <input formControlName="password"
+     type="password" class="form-control" id="pass_word">
+    <div  class="alert alert-danger" *ngIf="password?.touched && !password?.valid "> 
+  <div *ngIf=" password?.touched && password?.errors?.['required']"> enter an password</div>
+  <div *ngIf=" password?.touched && password?.errors?.['minlength']">password have to be more than 5 character</div>
+  <div *ngIf=" password?.touched && password?.errors?.['maxlength']">password have to be less than 15 character</div>
+</div>
+<button id="btn" (click)="get()"  [disabled]="!formL.valid" (click)="sendData()"  type="submit" class="btn btn-primary">Submit</button>
+<p class="small fw-bold mt-2 pt-1 mb-0">have an account? <a routerLink="/signin"
+  class="link-danger">login</a></p>
+</div>
+
+
+ 
+ 
+    
+  
+  
+
+ 
+  
+  
+
+
+  

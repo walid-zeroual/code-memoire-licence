@@ -1,0 +1,22 @@
+<div *ngIf="x==1" class="content">
+<div class="d-flex justify-content-center">
+<ol class="list-group">
+ <li  *ngFor="let courses of finaldata">
+<a target="_blank"  [href]="['https://educateplus.000webhostapp.com/items/'+courses.name]"> {{courses.name}} 
+
+   </a>   </li>
+</ol></div></div>
+ 
+<div *ngIf="x==0">
+   <div class="d-flex align-items-center justify-content-center vh-100">
+      <div class="text-center">
+          <h1 class="display-1 fw-bold">404</h1>
+          <p class="fs-3"> <span class="text-danger">Opps!</span> we dont have this course</p>
+          <p class="lead">
+            try to Search for an existence course or a word that related with the topic you are looking for
+            </p>
+          <a routerLink="/courses" class="btn btn-primary">Go to courses</a>
+      </div>
+  </div>
+    
+</div>

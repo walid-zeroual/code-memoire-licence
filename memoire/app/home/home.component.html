@@ -1,0 +1,34 @@
+
+
+
+     <div class="carousel">
+      <carousel  [pauseOnFocus]="true" >
+         <slide>
+           <img  src="assets/myimage/home1.jpg" alt="first slide">
+           <div  class="carousel-caption  d-xs-block">
+             
+             
+               <h1  >with us you can learn without limits</h1> 
+               <button routerLink="/signup"  *ngIf="islogin=='false'" class="  btn btn-outline-primary " id="getstarted"> Get Started</button>
+               <button (click)="router()"  *ngIf="islogin=='true'"  class="  btn btn-outline-primary " id="getstarted"> browse courses</button>
+           </div>
+         </slide>
+         <slide>
+           <img   src="assets/myimage/registeration.jpg" alt="second slide">
+           <div  class="carousel-caption  d-xs-block">
+             <h1 class="h2"> Want to know more about us</h1> 
+             <button routerLink="/about" id="about" type="button" class="btn btn-dark">About Us</button>
+         </div>
+         </slide>
+       </carousel>
+      </div>
+   
+  
+          
+         
+
+
+
+
+
+    

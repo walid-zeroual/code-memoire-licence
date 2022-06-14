@@ -1,0 +1,27 @@
+<ul id="sidenav" class="side-nav-close"   >
+    <a id="close" role="button" (click)="showmenu()"  >&times;</a>
+    
+      <input id="side-search" type="search" class="form-control " placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+<button (click)="sendcontent()" id="search-button" type="button" class="btn btn-primary">
+<i class="bi bi-search"></i></button>
+
+<li><a class="nav-link"  routerLink="">Home  </a></li>
+<li><a class="nav-link" (click)=" getcourses()"> courses </a></li>
+<li><a  class="nav-link" routerLink="/about"> about </a></li>
+<li><a  class="nav-link"routerLink="/contact"> contact </a></li>
+<div class="sidebtn">
+  
+ <div [ngSwitch]="true">
+      
+  <a  *ngSwitchCase="islogin=='false'"routerLink="/signin"> <button  id="in"  class="btn btn-outline-light">sign in</button></a>
+ 
+
+  <a *ngSwitchCase="islogin=='false'"   routerLink="/signup"> <button   id="up"  class="btn btn-outline-primary">sign up</button></a>
+ 
+ 
+  <a  *ngSwitchCase="islogin=='true'" (click)="logout()" routerLink="/"> <button  id="out"  class="btn btn-outline-primary">loged out</button></a>
+ 
+</div>
+</div>
+
+  </ul>

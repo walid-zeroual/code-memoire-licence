@@ -1,0 +1,94 @@
+
+ 
+<div class="col-xs-1">
+<div class="allcontent">
+   <div  class="sign-in-image"> 
+   </div>
+<div  class="d-inline-flex justify-content-center">
+  <form  class="f"  [formGroup]="form" (ngSubmit)="get()"  >
+     
+  
+    <div  class="input-container">
+       <div *ngIf="form.errors" class="alert alert-danger">user_email or password is invalid </div>
+    </div>
+   
+    <div class="input-container name">
+      <label for="exampleInputEmail1" class="form-label">username or email</label>
+      <input 
+   formControlName="useroremail"
+      id="nameoremail"
+       type="email" 
+       class="form-control" >
+
+      <div *ngIf="useroremail?.touched && !useroremail?.valid" class="alert alert-danger"   >username or email reqiuerd </div>
+     </div> 
+
+   
+    <div class="input-container password">
+      <label for="Password" class="form-label">Password</label>
+      <input 
+     
+     formControlName="password"    
+       type="password" 
+       class="form-control"
+        id="password">
+      <div  *ngIf="password?.touched && !password?.valid"  class="alert alert-danger">
+        <div  *ngIf="password?.touched && password?.errors?.['required']" > password required </div>
+       <div *ngIf="password?.touched && password?.errors?.['minlength']">password has to be more then 3 caracters</div>
+       <div *ngIf="password?.touched && password?.errors?.['maxlength']">password has to be less then 10 caracters</div>
+      </div>
+
+   
+ 
+  </div>
+  
+  
+   <div class="input-container">
+    <button id="submit"  (click)="get()" [disabled]="!form.valid"  (click)="sendata()"  type="submit" class="btn btn-primary">Login</button>
+    <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a routerLink="/signup"
+        class="link-danger">Register</a></p>
+  </div>
+      
+ 
+  </form> 
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <form class="f" #f="ngForm" [formGroup]="form" >
+  <h3>get signin now!</h3>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">username or email</label>
+    <input required  ngModel name="user" #user="ngModel"  id="nameoremail"
+     type="email" class="form-control"  >
+    <div class="alert alert-danger"  *ngIf=" user.touched && !user.valid">username or email reqiuerd </div>
+    
+  </div>
+ 
+  <div class="mb-3">
+    <label for="Password" class="form-label">Password</label>
+    <input required  minlength="5" maxlength="15" ngModel name="pass" #password="ngModel" 
+     type="password" class="form-control" id="password">
+    <div  class="alert alert-danger" *ngIf="password.touched && !password.valid "> 
+  <div *ngIf=" password.touched && !password.errors?.['reqiuerd']"> enter an password</div>
+  <div *ngIf=" password.touched && password.errors?.['minlength']">password have to be more than 5 character</div>
+  <div *ngIf=" password.touched && password.errors?.['maxlength']">password have to be less than 15 character</div>
+</div>
+</div> -->
+
+
+
+  

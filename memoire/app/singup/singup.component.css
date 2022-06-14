@@ -1,0 +1,56 @@
+.f{
+    text-align:center
+    
+}
+.input-container{
+    width: 300px;
+   margin-bottom: 10px;
+    
+
+}
+.input-container *{
+    border-radius: 7px;
+}
+.allcontent{
+    min-height: 100px;
+    display: flex; 
+    display: flex; 
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   font-size: medium
+   
+}
+.allcontent .sign-up-image{
+    width: 70%;
+    height: 600px;
+}
+.allcontent .f{
+    width: 30%;
+    margin-top: 100px;
+}
+.allcontent .f .input-container{
+    width: 250px;
+}
+@media (max-width: 1107px){
+    .allcontent{
+        flex-direction: column;
+        
+    }
+    .allcontent .f{
+        margin-top: 10px;
+    }
+    .allcontent .sign-up-image{
+        height: 230px;
+       width: 100%;
+       background-position-y: -230px;
+    }
+    }
+    @media (max-width: 449px){
+        .allcontent .f{
+            margin-top: 10px;
+            width:min-content;
+        }
+    
+    }
+    #btn{
+        margin-top: 10px;
+    }
