@@ -1,7 +1,6 @@
 # code-memoire-licence
 
 La recommendation basé sur le score se fait dans   : memoire/recommend.php
-
 qui inclue "matrix.php" et "cosineSimilarity.php"
 
 La recommendation basé sur le contenu se fait dans : memoire/pdfparser/BasedOnContent.php
