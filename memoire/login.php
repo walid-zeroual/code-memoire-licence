@@ -6,7 +6,7 @@ header("Access-Control-Allow-Methods: PUT, GET, POST, DELETE");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 include'db.php';
-// need to change this according to json sent by ayoub
+
 $login = file_get_contents('php://input');
 $login = json_decode($login,true);
 
@@ -124,4 +124,3 @@ function setLoginJson($loginJson){
 }
 //uncomment this to send login information as json
 setLoginJson($login);
-//print_r($_SESSION[$login['username']]);
